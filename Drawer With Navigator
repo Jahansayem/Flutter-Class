@@ -1,0 +1,108 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_application_1/Setting.dart';
+import 'package:flutter_application_1/contact.dart';
+import 'package:flutter_application_1/profile.dart';
+
+class Homepage extends StatelessWidget {
+  const Homepage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("This is Homepage"),
+        centerTitle: true,
+      ),
+      drawer: Drawer(
+        child: ListView(
+          children: [
+            DrawerHeader(
+              child: Center(
+                  child: Text(
+                "This is header",
+                style: TextStyle(fontWeight: FontWeight.bold),
+              )),
+              decoration: BoxDecoration(color: Colors.blue),
+            ),
+            InkWell(
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => Homepage()));
+              },
+              child: Container(
+                padding: EdgeInsets.symmetric(horizontal: 36),
+                height: 50,
+                width: double.minPositive,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(Icons.home),
+                    Text("Home"),
+                    Icon(Icons.arrow_forward)
+                  ],
+                ),
+              ),
+            ),
+            InkWell(
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => setting()));
+              },
+              child: Container(
+                padding: EdgeInsets.symmetric(horizontal: 36),
+                height: 50,
+                width: double.minPositive,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(Icons.settings),
+                    Text("Setting"),
+                    Icon(Icons.arrow_forward)
+                  ],
+                ),
+              ),
+            ),
+            InkWell(
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => Contact()));
+              },
+              child: Container(
+                padding: EdgeInsets.symmetric(horizontal: 36),
+                height: 50,
+                width: double.minPositive,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(Icons.contacts),
+                    Text("Contact"),
+                    Icon(Icons.arrow_forward)
+                  ],
+                ),
+              ),
+            ),
+            InkWell(
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => profile()));
+              },
+              child: Container(
+                padding: EdgeInsets.symmetric(horizontal: 36),
+                height: 50,
+                width: double.minPositive,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(Icons.people),
+                    Text("Profile"),
+                    Icon(Icons.arrow_forward)
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
