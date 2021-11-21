@@ -1,0 +1,96 @@
+import 'package:flutter/material.dart';
+
+class Homepage extends StatelessWidget {
+  const Homepage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Homepage"),
+        centerTitle: true,
+      ),
+      drawer: Drawer(
+        child: ListView(
+          children: [
+            DrawerHeader(
+              child: Center(
+                child: Text("This is Header"),
+              ),
+              decoration: BoxDecoration(
+                color: Colors.green,
+              ),
+              curve: Curves.ease,
+            ),
+            Container(
+              padding: EdgeInsets.symmetric(horizontal: 36),
+              height: 50,
+              color: Colors.blue,
+              width: double.minPositive,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Icon(Icons.home),
+                  Text("Home"),
+                  Icon(Icons.arrow_forward),
+                ],
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.symmetric(horizontal: 36),
+              height: 40,
+              width: double.minPositive,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Icon(Icons.home),
+                  Text("Home"),
+                  Icon(Icons.arrow_forward),
+                ],
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.symmetric(horizontal: 36),
+              height: 40,
+              width: double.minPositive,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Icon(Icons.home),
+                  Text("Home"),
+                  Icon(Icons.arrow_forward),
+                ],
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.symmetric(horizontal: 36),
+              height: 40,
+              width: double.minPositive,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Icon(Icons.home),
+                  Text("Home"),
+                  Icon(Icons.arrow_forward),
+                ],
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.symmetric(horizontal: 36),
+              height: 40,
+              width: double.minPositive,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Icon(Icons.home),
+                  Text("Home"),
+                  Icon(Icons.arrow_forward),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
